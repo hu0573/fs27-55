@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="w-full felx justify-items-center">
       <div className="w-70 px-5">
-        <h1>Header</h1>
+        <h1 className="my-5 text-4xl">Header</h1>
         <Balance></Balance>
         <History></History>
         <Add></Add>
