@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import Transation from "./components/Transaction";
 
@@ -8,7 +8,11 @@ function History() {
     <div>
       <h2 className="text-2xl">History</h2>
       {transactions.map((item) => (
-        <Transation transaction={item}></Transation>
+        <Transation
+          key={item.id}
+          transaction={item}
+          onDelete={deleteTransaction}
+        ></Transation>
       ))}
     </div>
   );
